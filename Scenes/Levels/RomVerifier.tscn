@@ -303,22 +303,3 @@ stream = ExtResource("11_4o1wk")
 
 [node name="ErrorSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_2ok7u")
-
-[node name="FileDialog" type="FileDialog" parent="."]
-oversampling_override = 1.0
-title = "SELECT A VALID ROM"
-size = Vector2i(352, 240)
-popup_window = true
-ok_button_text = "OPEN"
-dialog_hide_on_ok = true
-cancel_button_text = "CANCEL"
-file_mode = 0
-access = 2
-filters = PackedStringArray("*.nes", "*.nez", "*.fds", "*.qd", "*.unf", "*.unif", "*.nsf", "*.nsfe")
-use_native_dialog = true
-folder_creation_enabled = false
-favorites_enabled = false
-recent_list_enabled = false
-
-[connection signal="file_selected" from="FileDialog" to="." method="handle_rom"]
-[connection signal="files_selected" from="FileDialog" to="." method="on_file_dropped"]
